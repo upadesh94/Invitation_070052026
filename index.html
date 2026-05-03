@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="नामकरण सोहळा - Naming Ceremony Invitation">
+    <meta property="og:title" content="नामकरण सोहळा | Naming Ceremony Invitation">
+    <meta property="og:description" content="नामकरण सोहळा - Naming Ceremony Invitation">
+    <meta property="og:image" content="photos/IMG_20260503_163806_433101.png">
+    <meta property="og:type" content="website">
+    <title>नामकरण सोहळा | Naming Ceremony Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+    <div id="introOverlay" class="intro-overlay" aria-hidden="true">
+        <div class="intro-text">We invite you to celebrate...</div>
+    </div>
+
+    <div id="envelopeStage" class="envelope-stage is-hidden" aria-hidden="true">
+        <button class="envelope" id="openEnvelope" aria-label="Open invitation">
+            <span class="envelope-flap"></span>
+            <span class="envelope-body"></span>
+            <span class="envelope-card">Invitation</span>
+        </button>
+        <p class="envelope-hint">Tap to open</p>
+    </div>
+
+    <div id="siteContent" class="site-content is-hidden">
+
+    <!-- Background Music Toggle -->
+    <button class="music-toggle" id="musicToggle" aria-label="Toggle Music">
+        🔇
+    </button>
+    <audio id="bgMusic" loop>
+        <source src="assets/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <canvas id="bg-canvas"></canvas>
+        <div class="decorative-border-top"></div>
+        <div class="floating-particles" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="ganesh-icon">
+            <img src="photos/OM_png.png" alt="Om Symbol">
+        </div>
+        
+        <div class="side-cartoon left">
+            <img src="https://www.pngplay.com/wp-content/uploads/12/Shin-Chan-PNG-Images-HD.png" alt="Cartoon Baby">
+        </div>
+        <div class="side-cartoon right">
+            <img src="https://www.pngall.com/wp-content/uploads/2016/06/Pokemon-PNG-Clipart.png" alt="Cartoon Baby">
+        </div>
+
+        <div class="floating-sticker floating-sticker-one" aria-hidden="true">
+            <img src="https://freepngimg.com/thumb/categories/402.png" alt="Decorative Flower">
+        </div>
+        <div class="floating-sticker floating-sticker-three" aria-hidden="true">
+            <img src="https://www.pngplay.com/wp-content/uploads/12/Shin-Chan-PNG-Images-HD.png" alt="Decorative Character">
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="ganesh-namah">|| गणेशाय नमः ||</h1>
+                    
+                    <div class="parents-names">
+                        <p id="parentsNames" data-full-text="सौ. आरती गायगोळ व श्री. गोपाल गायगोळ">सौ. आरती गायगोळ व श्री. गोपाल गायगोळ</p>
+                    </div>
+                    
+                    <div class="ceremony-title">
+                        <img src="photos/namkar_text.png" alt="नामकरण सोहळा" class="ceremony-text-img">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Details Section -->
+    <section class="event-details">
+        <div class="container">
+            <div class="details-card">
+                <div class="detail-item highlight-pulse">
+                    <span class="icon">📅</span>
+                    <div class="detail-text">
+                        <h3>दिनांक</h3>
+                        <p>गुरुवार, 07 मे 2026</p>
+                    </div>
+                </div>
+                
+                <div class="detail-item highlight-pulse">
+                    <span class="icon">⏰</span>
+                    <div class="detail-text">
+                        <h3>वेळ</h3>
+                        <p>दुपारी 03:00 वाजता</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Countdown Timer -->
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span id="days">00</span>
+                    <label>दिवस</label>
+                </div>
+                <div class="countdown-item">
+                    <span id="hours">00</span>
+                    <label>तास</label>
+                </div>
+                <div class="countdown-item">
+                    <span id="minutes">00</span>
+                    <label>मिनिटे</label>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section class="photo-gallery">
+        <div class="container">
+            <h2 class="section-title">फोटो गॅलरी</h2>
+            <div class="gallery-stack" id="galleryStack">
+                <div class="gallery-card"><img src="photos/WhatsApp%20Image%202026-04-29%20at%2022.47.35.jpeg" alt="Baby Photo"></div>
+                <div class="gallery-card"><img src="photos/WhatsApp%20Image%202026-04-29%20at%2022.47.37.jpeg" alt="Baby Photo"></div>
+                <div class="gallery-card"><img src="photos/WhatsApp%20Image%202026-04-29%20at%2022.47.41.jpeg" alt="Baby Photo"></div>
+                <div class="gallery-card"><img src="photos/WhatsApp%20Image%202026-04-29%20at%2022.47.42.jpeg" alt="Baby Photo"></div>
+                <div class="gallery-card"><img src="photos/WhatsApp%20Image%202026-05-03%20at%2016.06.14.jpeg" alt="Baby Photo"></div>
+                <div class="gallery-card"><img src="photos/WhatsApp%20Image%202026-05-03%20at%2016.06.15%20(1).jpeg" alt="Baby Photo"></div>
+                <div class="gallery-card"><img src="photos/WhatsApp%20Image%202026-05-03%20at%2016.06.15%20(2).jpeg" alt="Baby Photo"></div>
+                <div class="gallery-card"><img src="photos/WhatsApp%20Image%202026-05-03%20at%2016.06.15.jpeg" alt="Baby Photo"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Invitation Message Section -->
+    <section class="invitation-message">
+        <div class="container">
+            <div class="message-card">
+                <div class="rangoli-decoration"></div>
+                <p class="invitation-text">
+                    आमच्या घरात आलेल्या नव्या पाहुण्याच्या नामकरण सोहळ्यास<br>
+                    आपल्या कुटुंबासह पधारण्याची विनंती.<br>
+                    आपल्या शुभ उपस्थितीने सोहळा शोभेल अशी आशा आहे.
+                </p>
+                <div class="bell-decoration">🔔</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Baby Quote Section -->
+    <section class="baby-quote">
+        <div class="container">
+            <div class="quote-card">
+                <div class="quote-image">
+                    <img src="assets/baby-icon.png" alt="Baby" onerror="this.style.display='none'">
+                </div>
+                <div class="quote-text">
+                    <p id="dynamicQuote"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location-section">
+        <div class="container">
+            <h2 class="section-title">📍 स्थळ</h2>
+            <div class="location-wrapper">
+                <div class="location-info-card highlight-pulse">
+                    <div class="location-icon-wrapper">
+                        <div class="location-icon-bg">
+                            <span class="location-icon">📍</span>
+                        </div>
+                    </div>
+                    <div class="location-details">
+                        <h3 class="location-title">कार्यक्रम स्थळ</h3>
+                        <p class="location-address">
+                            <strong>सोयगाव</strong><br>
+                            महाराष्ट्र 443106<br>
+                            भारत
+                        </p>
+                        <div class="location-actions">
+                            <button class="btn-location-primary" onclick="openMap()">
+                                <span>🗺️</span> Google Maps वर पहा
+                            </button>
+                            <button class="btn-location-secondary" onclick="getDirections()">
+                                <span>🧭</span> दिशानिर्देश मिळवा
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-card">
+                    <div class="map-header">
+                        <span class="map-badge">🗺️ Live Location</span>
+                    </div>
+                    <div class="map-container" id="mapContainer">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=20.4350877,75.9938985&z=15&output=embed"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="map-footer">
+                        <div class="map-coordinates">
+                            <span>📐 20.4350877, 75.9938985</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title">संपर्क</h2>
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <span class="icon">📞</span>
+                    <p>+91 76668 12421</p>
+                    <a href="tel:+917666812421" class="btn-call">Call Now</a>
+                </div>
+                <div class="contact-card">
+                    <span class="icon">📞</span>
+                    <p>+91 72185 60072</p>
+                    <a href="tel:+917218560072" class="btn-call">Call Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QR Code Section -->
+    <section class="qr-section">
+        <div class="container">
+            <div class="qr-card">
+                <h3>Invitation Card</h3>
+                <div class="qr-code">
+                    <img src="photos/card.jpeg" alt="Invitation Card" id="qrCode">
+                </div>
+                <p>कार्ड पहा आणि खालील बटणाने डाउनलोड करा.</p>
+                <a class="btn-download-card" href="photos/card.jpeg" download="invitation-card.jpeg">Download Card</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Share Section -->
+    <section class="share-section">
+        <div class="container">
+            <button class="btn-share" onclick="shareInvitation()">
+                <span>📤</span> Share Invitation
+            </button>
+        </div>
+    </section>
+
+    <!-- Thank You Section -->
+    <section class="thank-you-section">
+        <div class="container">
+            <div class="thank-you-card">
+                <h2>Thank You</h2>
+                <p>मनापासून धन्यवाद.</p>
+                <div class="thank-you-sparkles" aria-hidden="true"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="decorative-border-bottom"></div>
+        <div class="footer-content">
+            <h3 class="footer-title">Invite</h3>
+            <div class="floral-decoration">🌸 ❀ 🌸</div>
+        </div>
+    </footer>
+
+    </div>
+
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

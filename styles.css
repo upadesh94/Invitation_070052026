@@ -166,6 +166,11 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 /* ===========================
@@ -1298,6 +1303,18 @@ body {
     color: white;
     padding: 60px 20px 40px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
 }
 
 .decorative-border-bottom {
@@ -1318,7 +1335,7 @@ body {
 .footer-title {
     font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin: 0;
     font-family: 'Poppins', cursive;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -1326,6 +1343,47 @@ body {
 .floral-decoration {
     font-size: 2rem;
     letter-spacing: 20px;
+    margin: 0;
+}
+
+.footer-link-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+}
+
+.footer-link-section p {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    font-weight: 500;
+}
+
+.vercel-link {
+    font-size: 13px;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+.vercel-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+    border-color: rgba(212, 175, 55, 0.7);
+    text-decoration: none;
+    transform: scale(1.05);
 }
 
 /* ===========================
